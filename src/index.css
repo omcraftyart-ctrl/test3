@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headings: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  
+  --color-bg-primary: #FCFBF8;
+  --color-bg-secondary: #F3EFE6;
+  --color-primary-accent: #3A4F32;
+  --color-secondary-accent: #B59A6D;
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #5C5C5C;
+  --color-borders-dividers: #DCD3C6;
+
+  --shadow-soft: 0 15px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
